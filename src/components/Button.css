@@ -1,0 +1,26 @@
+
+.btn{
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    padding: 8px 20px;
+    transition: all 0.4s ease-out;
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    transition: 0.3s;
+
+
+}
+
+.btn--login {
+    padding: 8px 20px;
+    background-color: #ffed4e;;
+    border-radius: 4px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}

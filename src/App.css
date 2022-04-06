@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /*Google fonts*/
+}
+
+.home,
+.offer{
+  
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.contact{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*background-image: url('./images/cars.png');
+  background-position: top;
+  background-size: 50vh;
+  background-repeat: no-repeat;*/
+  color: rgb(97, 97, 97);
+  font-size: 30px;
+}
+
+.sign-up, 
+.login,
+.profile,
+.password,
+.update{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(170, 170, 170) 100%);
+  padding: 30px;
+  margin: 2%;
+  color:rgb(255, 255, 255);
+}
+
+
+
+
+/*poniższa część odnosi się do karty Home i jej tła (video)*/
+#video {
+  top: 100px;
+  position: fixed;
+  width:100%;
+  
+  
+}
+
+h1{
+  z-index: 1; /*tekst ma być na wierzchu, przed video*/
+  font-size: 30px;
+}
+
+.home{
+  color:#ffed4e;
+  font-size: 20px;
+  display: flex;
+  background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(170, 170, 170) 100%);
+  
+}
+
+
+
+.Link {
+  padding: 8px 20px;
+  background-color: #acacac;;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.Link:hover{
+  padding: 8px 20px;
+  transition: all 0.4s ease-out;
+  background: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+/*poniższa część odnosi się do karty ContactFomr i jej formularza wysyłania wiadomości*/
+.CnStyle {
+  border-radius: 15px;
+  background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(170, 170, 170) 100%);
+  padding: 30px;
+  margin: 2%;
+  color:rgb(255, 255, 255);
+  
+
+}
+
+#send {
+  background-color: #ffed4e;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#send:hover{
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+  padding: 14px 24px;
+}
+
+input, textarea {
+  width: 100%; 
+  padding: 12px;  
+  border: 1px solid rgb(0, 0, 0); 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}

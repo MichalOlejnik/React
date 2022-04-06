@@ -1,0 +1,139 @@
+.NavbarItems{
+    background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(170, 170, 170) 100%); /*kolor-gradient*/
+    height: 100px;              /*Stała wysokość naszego panelu nawigacyjnego*/
+    display: flex;              /*możliwość ustawienia elementów w kolejności - jednowymiarowa*/
+    justify-content: center;    /*wyjustowanie tekstu do środka - w poziomie*/
+    align-items: center;        /*wyjustowanie tekstu do środka - w poziomie*/
+    font-size: 1.2rem;          /*1rem=16px*/
+}
+
+.navbar-logo{
+    color: rgb(255, 255, 255);
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;            /*sprawia, że przy najechaniu kursorem, logo wizualnie nie jest traktowane jako tekst*/
+    font-size: 40px;
+}
+
+.fa-car{
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.nav-menu{
+    display:grid;                               /*2D*/
+    grid-template-columns: repeat(5, auto);     /*Sprawia, że elementy Navbar zostaną wyświetlone jedno PO drugim, zamiast (domyślnego) jedno POD drugim*/
+    grid-gap: 10px;                             /*Przerwa pomiędzy elementami*/
+    list-style: none;                           /*Pozbywamy się kropek, domyślnych dla list*/
+    text-align: center;
+    width: 70vw;                                /*rozmiar względem okna przeglądarki, 70vw - oznacza szerokość 70/100*/
+    justify-content: end;                       /*Elementy Navbar zostaną przesunięte do prawej krawędzi okna*/
+    margin-right: 2rem;                         /*32px od prawej krawędzi*/
+}
+
+.nav-links{
+    color:rgb(255, 255, 255);                 /*tekst/linki do podstron koloru białego*/
+    text-decoration: none;                      /*bez domyślnego dla linków podkreślenia*/
+    padding:0.5rem 1rem;                        /*wielkość każdego elementu - widoczna np. po najechniu - hover*/
+}
+
+.nav-links:hover {
+    background-color: #363636;
+    border-radius: 7px;                         /*niweluje ostre krawędzie*/
+    transition: all 0.3s ease-out;              /*animacja opóźniająca - hover nie następuje natychmiast po najechaniu kursorem*/
+}
+
+.fa-bars {                                      /*rozwijanie naszego menu - gdy mobilnie*/
+    color:rgb(255, 255, 255)
+}
+
+.mobile-log{                              /*logowanie*/
+    display: none;                              /*niewidoczne*/
+}
+
+.menu-icon{                                     /*rozwijanie menu niewidoczne, póki widok nie jest mobilny*/
+    display: none;
+}
+
+@media screen and (max-width: 750px) {          /*tryb mobilny*/
+    .NavbarItems {
+        position: relative;
+    
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;                           /*navbar w wersji mobilnej zajmie całą szerokość ekranu*/
+        height: 520px;                         
+        position: absolute;
+        top: 100px;                            /*odległość od góry strony*/
+        left: -100%;                           /*animacja wjazdu*/
+        opacity: 20;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background: linear-gradient(90deg, rgb(54, 54, 54) 0%, rgb(170, 170, 170) 100%);
+        left: 0;                               /*pojawianie się w odpowiednim miejscu*/
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-links {
+        text-align: center;                    
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: #363636;
+        border-radius: 0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .fa-times {                               /*zamykanie rozwijanego menu*/
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .mobile-log {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 40%;
+        background: #ffed4e;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+    }
+
+    .mobile-log:hover {
+        background: rgb(255, 255, 255);
+        color: #000000;
+        transition: 250ms;
+    }
+
+    #buttons {
+        display: none;
+    }
+}
